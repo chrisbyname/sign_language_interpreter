@@ -1,170 +1,53 @@
-Sign Language Interpreter
-Project Idea / Goal
+# Sign Language Interpreter
 
-The goal of this project is to build a real-time sign language interpreter using computer vision and machine learning. The system detects hand gestures from a webcam feed, extracts structured hand landmarks, and classifies them into recognizable sign language letters or gestures.
+## Project Idea / Goal
 
-This project aims to help bridge communication barriers by translating visual sign input into readable text output, demonstrating how AI can be applied to accessibility challenges.
+The goal of this project is to build a **real-time sign language interpreter** using computer vision and machine learning. The system captures hand gestures through a webcam, extracts structured hand landmark coordinates, and classifies them into recognizable sign language letters or gestures.
 
-The core objectives are:
+This project demonstrates how artificial intelligence and computer vision can be applied to accessibility challenges by translating visual sign input into readable text output.
 
-Detect hands in real-time using a webcam
+### Core Objectives
 
-Extract hand landmark coordinates
+- Detect hands in real-time using a webcam  
+- Extract 21 hand landmark coordinates per detected hand  
+- Train a machine learning model on landmark data  
+- Predict and display sign language gestures live  
 
-Train a machine learning model on those landmarks
+---
 
-Predict and display sign language gestures live
+## How It Works
 
-How It Works
+1. The webcam captures live video input.
+2. MediaPipe detects hand landmarks (21 key points per hand).
+3. Landmark coordinates are converted into a structured numerical feature vector.
+4. A trained model predicts the corresponding sign.
+5. The predicted label is displayed on the screen in real time.
 
-The webcam captures live video input.
+---
 
-MediaPipe detects hand landmarks (21 key points per hand).
+## Technology & Stack
 
-Landmark coordinates are processed and formatted.
+### Programming Language
+- Python 3.x
 
-A trained model predicts the corresponding sign.
+### Computer Vision
+- OpenCV – video capture and frame processing  
+- MediaPipe – hand landmark detection  
 
-The predicted label is displayed on the screen.
+### Machine Learning
+- TensorFlow / Keras (or chosen ML framework)  
+- NumPy – numerical data handling  
+- Scikit-learn (for preprocessing and evaluation if used)  
 
-Technology & Stack
-Programming Language
+### Environment
+- Virtual environment recommended (venv)
 
-Python 3.x
+---
 
-Computer Vision
+## Installation
 
-OpenCV – video capture and frame processing
+### 1. Clone the Repository
 
-MediaPipe – hand landmark detection
-
-Machine Learning
-
-TensorFlow / Keras (or chosen ML framework)
-
-NumPy – numerical data handling
-
-Scikit-learn (if used for preprocessing or evaluation)
-
-Environment
-
-Virtual environment recommended (venv)
-
-Installation
-1. Clone the Repository
+```bash
 git clone https://github.com/chrisbyname/sign_language_interpreter.git
 cd sign_language_interpreter
-2. Create a Virtual Environment (Recommended)
-python -m venv venv
-
-Activate it:
-
-Windows
-
-venv\Scripts\activate
-
-Mac/Linux
-
-source venv/bin/activate
-3. Install Dependencies
-
-If you have a requirements.txt:
-
-pip install -r requirements.txt
-
-If not, typical dependencies include:
-
-pip install opencv-python mediapipe tensorflow numpy scikit-learn
-Usage
-
-Run the main script:
-
-python main.py
-
-The webcam will open, and the system will begin detecting and classifying hand gestures in real time.
-
-Press the designated key (usually q) to exit.
-
-Conclusion
-
-The system successfully:
-
-Detects hand landmarks in real time
-
-Converts landmark data into structured model input
-
-Classifies gestures using a trained machine learning model
-
-Displays live predictions on screen
-
-Initial results show reliable detection under good lighting and clear hand positioning. Accuracy depends heavily on dataset quality and environmental conditions.
-
-Fine-tuning the model and expanding the dataset significantly improves recognition consistency.
-
-Lessons Learned
-1. Data Quality Is Critical
-
-Small or repetitive datasets cause overfitting. More variation in hand orientation, lighting, and background improves model robustness.
-
-2. Landmark-Based Models Are Efficient
-
-Using structured hand landmark coordinates is significantly more efficient than training directly on raw images.
-
-3. Real-Time Performance Requires Optimization
-
-Model size and preprocessing speed directly impact frame rate and usability.
-
-4. Environment Setup Matters
-
-Virtual environments and proper .gitignore configuration prevent dependency and repository issues.
-
-Next Steps
-
-Potential improvements and future development opportunities:
-
-Expand gesture vocabulary beyond single letters
-
-Add sentence-level recognition
-
-Implement text-to-speech output
-
-Improve model accuracy using transfer learning
-
-Build a graphical user interface
-
-Deploy as a web application or mobile app
-
-Add multi-hand support and gesture sequences
-
-Project Structure (Example)
-sign_language_interpreter/
-│
-├── data/                 # Dataset (if included)
-├── models/               # Saved trained models
-├── main.py               # Entry point
-├── training.py           # Model training script
-├── requirements.txt      # Dependencies
-└── README.md             # Documentation
-References
-
-MediaPipe Hand Tracking Documentation
-
-OpenCV Documentation
-
-TensorFlow / Keras Documentation
-
-Research papers on sign language recognition using computer vision
-
-License
-
-This project is for educational and research purposes.
-
-If you would like, I can also generate:
-
-A professional portfolio-ready version
-
-A shorter academic submission version
-
-A technical deep-dive version
-
-Or add diagrams and architecture explanations
