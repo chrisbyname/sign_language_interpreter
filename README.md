@@ -152,3 +152,7 @@ If no requirements file:
 ## License
 
 -   Educational and research use only.
+
+## Extended Documentation
+
+- See `DOCUMENTATION.md` for a structured project report.
