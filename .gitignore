@@ -1,0 +1,7 @@
+Lib/
+pyvenv.cfg
+Scripts/
+share/
+Unused Python Files/
+python311/
+unvoiced/
