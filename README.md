@@ -115,6 +115,7 @@ Optional supporting scripts:
 - It converts landmark data into structured model input.
 - The trained model predicts sign gestures.
 - Predictions are displayed live on screen.
+- Text-To-Speech reads predictions aloud.
 - Performance depends on lighting conditions and dataset quality.
 - Fine-tuning improves accuracy and reliability.
 
@@ -136,7 +137,6 @@ Optional supporting scripts:
 
 - Expand the gesture vocabulary.
 - Add sentence-level recognition.
-- Implement text-to-speech output.
 - Improve model accuracy with transfer learning.
 - Create a graphical user interface.
 - Deploy as a web or mobile application.
