@@ -124,12 +124,13 @@ Optional supporting scripts:
 ## Lessons Learned
 
 - Dataset quality directly impacts model performance.
-- Small datasets often lead to overfitting.
+- Big datasets often lead to overfitting.
 - Greater sample variation improves generalization.
 - Landmark-based approaches are efficient compared to raw image training.
 - Real-time performance requires optimization.
 - Proper virtual environment management helps prevent dependency issues.
 - A correct .gitignore prevents committing unnecessary files.
+- How to correctly upload files to Github.
 
 ------------------------------------------------------------------------
 
